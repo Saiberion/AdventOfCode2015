@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DC38BBB8-D0EA-4215-BE71-71CBDF3E0C4A}</ProjectGuid>
+    <ProjectGuid>{DED1130F-C089-43F1-B632-A50ED9C8C032}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Day01</RootNamespace>
-    <AssemblyName>Day01</AssemblyName>
+    <RootNamespace>Solver</RootNamespace>
+    <AssemblyName>Solver</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,6 +48,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="inputs\day01.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Days\Days.csproj">
+      <Project>{754ddbf4-4401-4132-b8e8-85d85ca1fed2}</Project>
+      <Name>Days</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
