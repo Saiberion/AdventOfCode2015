@@ -12,14 +12,16 @@ namespace Days
         {
             Part1Text = "Santa is at floor";
             Part2Text = "Entered basement at step";
+
+            Load("inputs/day01.txt");
         }
 
-        override public void Solve(List<string> input)
+        override public void Solve()
         {
             int floor = 0;
             int stepsTaken = 0;
             bool enteredBasement = false;
-            foreach(string s in input)
+            foreach(string s in Input)
             {
                 foreach(char c in s)
                 {
