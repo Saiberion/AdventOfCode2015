@@ -12,7 +12,7 @@ namespace Solver
     {
         static void Main(string[] args)
         {
-            Day d = new Day05();
+            Day d = new Day06();
             d.Solve();
             Console.WriteLine("{0}: {1}", d.Part1Text, d.Part1Solution);
             Console.WriteLine("{0}: {1}", d.Part2Text, d.Part2Solution);
