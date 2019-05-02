@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Text.RegularExpressions;
@@ -18,7 +19,7 @@ namespace Days
         public Day19()
         {
             Part1Text = "Unique molecules";
-            Part2Text = "";
+            Part2Text = "Steps to create molecule";
 
             Load("inputs/day19.txt");
         }
@@ -58,6 +59,24 @@ namespace Days
             }
 
             Part1Solution = uniqueMolecules.Count.ToString();
+
+            int cnt = 0;
+            while (!startingMolecule.Equals("e"))
+            {
+                foreach (ReplacementRule r in replacementRules)
+                {
+                    int searchIndex = 0;
+                    int foundIndex;
+
+                    if ((foundIndex = startingMolecule.IndexOf(r.To, searchIndex)) >= 0)
+                    {
+                        string n = startingMolecule.Substring(0, foundIndex) + r.From + startingMolecule.Substring(foundIndex + r.To.Length);
+                        cnt++;
+                        startingMolecule = n;
+                    }
+                }
+            }
+            Part2Solution = cnt.ToString();
         }
     }
 }
