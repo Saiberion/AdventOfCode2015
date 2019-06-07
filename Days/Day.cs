@@ -13,7 +13,9 @@ namespace Days
         public string Part1Solution { get; set; }
         public string Part2Text { get; internal set; }
         public string Part2Solution { get; set; }
+        public string Name { get; set; }
         internal List<string> Input { get; set; }
+        public System.Diagnostics.Stopwatch StopWatch { get; set; }
 
         abstract public void Solve();
 
