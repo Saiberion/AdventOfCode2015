@@ -54,14 +54,14 @@
             this.tableLayoutPanelMain.Padding = new System.Windows.Forms.Padding(5);
             this.tableLayoutPanelMain.RowCount = 1;
             this.tableLayoutPanelMain.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 33F));
-            this.tableLayoutPanelMain.Size = new System.Drawing.Size(436, 863);
+            this.tableLayoutPanelMain.Size = new System.Drawing.Size(436, 218);
             this.tableLayoutPanelMain.TabIndex = 5;
             // 
             // labelCaptionSolutionPart1
             // 
             this.labelCaptionSolutionPart1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelCaptionSolutionPart1.AutoSize = true;
-            this.labelCaptionSolutionPart1.Location = new System.Drawing.Point(119, 425);
+            this.labelCaptionSolutionPart1.Location = new System.Drawing.Point(119, 102);
             this.labelCaptionSolutionPart1.Name = "labelCaptionSolutionPart1";
             this.labelCaptionSolutionPart1.Size = new System.Drawing.Size(76, 13);
             this.labelCaptionSolutionPart1.TabIndex = 3;
@@ -71,7 +71,7 @@
             // 
             this.labelCaptionSolutionPart2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelCaptionSolutionPart2.AutoSize = true;
-            this.labelCaptionSolutionPart2.Location = new System.Drawing.Point(220, 425);
+            this.labelCaptionSolutionPart2.Location = new System.Drawing.Point(220, 102);
             this.labelCaptionSolutionPart2.Name = "labelCaptionSolutionPart2";
             this.labelCaptionSolutionPart2.Size = new System.Drawing.Size(76, 13);
             this.labelCaptionSolutionPart2.TabIndex = 4;
@@ -81,7 +81,7 @@
             // 
             this.labelRuntime.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.labelRuntime.AutoSize = true;
-            this.labelRuntime.Location = new System.Drawing.Point(335, 425);
+            this.labelRuntime.Location = new System.Drawing.Point(335, 102);
             this.labelRuntime.Name = "labelRuntime";
             this.labelRuntime.Size = new System.Drawing.Size(69, 13);
             this.labelRuntime.TabIndex = 5;
@@ -93,7 +93,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.ClientSize = new System.Drawing.Size(436, 863);
+            this.ClientSize = new System.Drawing.Size(436, 218);
             this.Controls.Add(this.tableLayoutPanelMain);
             this.DoubleBuffered = true;
             this.Location = new System.Drawing.Point(20, 20);
