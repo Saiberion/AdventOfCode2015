@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace SolverUI
 {
-    public partial class Form1 : Form
+    public partial class SolverUI : Form
     {
         List<Days.Day> days = new List<Days.Day>()
         {
@@ -42,16 +42,16 @@ namespace SolverUI
             new Day25() { Name = "Day 25", StopWatch = new System.Diagnostics.Stopwatch() }
         };
 
-        public Form1()
+        public SolverUI()
         {
             InitializeComponent();
 
-            SetDoubleBuffered(tableLayoutPanel2);
+            SetDoubleBuffered(tableLayoutPanelMain);
 
             for (int i = 0; i < days.Count; i++)
             {
-                tableLayoutPanel2.RowCount++;
-                tableLayoutPanel2.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
+                tableLayoutPanelMain.RowCount++;
+                tableLayoutPanelMain.RowStyles.Add(new RowStyle(SizeType.Absolute, 30F));
 
                 Button b = new Button
                 {
@@ -62,9 +62,9 @@ namespace SolverUI
                     Tag = days[i]
                 };
                 b.Click += ButtonSolveSingleDay;
-                tableLayoutPanel2.Controls.Add(b, 0, i + 1);
+                tableLayoutPanelMain.Controls.Add(b, 0, i + 1);
                 
-                tableLayoutPanel2.Controls.Add(new Label()
+                tableLayoutPanelMain.Controls.Add(new Label()
                 {
                     Anchor = AnchorStyles.None,
                     Name = string.Format("labelD{0}P1", i + 1),
@@ -72,7 +72,7 @@ namespace SolverUI
                     AutoSize = true
                 }, 1, i + 1);
 
-                tableLayoutPanel2.Controls.Add(new Label()
+                tableLayoutPanelMain.Controls.Add(new Label()
                 {
                     Anchor = AnchorStyles.None,
                     Name = string.Format("labelD{0}P2", i + 1),
@@ -80,7 +80,7 @@ namespace SolverUI
                     AutoSize = true
                 }, 2, i + 1);
 
-                tableLayoutPanel2.Controls.Add(new Label()
+                tableLayoutPanelMain.Controls.Add(new Label()
                 {
                     Anchor = AnchorStyles.None,
                     Name = string.Format("labelD{0}Perf", i + 1),
@@ -97,14 +97,14 @@ namespace SolverUI
                 Size = new Size(90, 25)
             };
             b2.Click += ButtonSolveAllDays;
-            tableLayoutPanel2.Controls.Add(b2, 0, 0);
+            tableLayoutPanelMain.Controls.Add(b2, 0, 0);
         }
 
         private void ButtonSolveAllDays(object sender, EventArgs e)
         {
-            for (int i = 1; i < tableLayoutPanel2.RowCount; i++)
+            for (int i = 1; i < tableLayoutPanelMain.RowCount; i++)
             {
-                Button b = tableLayoutPanel2.GetControlFromPosition(0, i) as Button;
+                Button b = tableLayoutPanelMain.GetControlFromPosition(0, i) as Button;
                 ButtonSolveSingleDay(b, new EventArgs());
             }
         }
